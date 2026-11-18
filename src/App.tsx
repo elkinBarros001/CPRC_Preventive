@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { DiagnosticModule } from './components/DiagnosticModule';
 import { PhishingSimulator } from './components/PhishingSimulator';
 import { BestPracticesHub } from './components/BestPracticesHub';
