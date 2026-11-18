@@ -12,22 +12,22 @@ function App() {
         <h1 style={{ fontSize: '28px', fontWeight: 'extrabold', margin: 0 }}>CPRC Preventive App</h1>
         <p style={{ fontSize: '14px', color: '#94a3b8', margin: '5px 0 15px 0' }}>Herramienta de alfabetización y diagnóstico de ciberseguridad</p>
         
-        <nav style={{ display: 'flex', justifyContent: 'center', gap: '15px' }}>
+        <nav style={{ display: 'flex', justifyContent: 'center', gap: '10px', flexWrap: 'wrap', padding: '0 10px' }}>
           <button 
             onClick={() => setCurrentTab('diagnostic')}
-            style={{ padding: '8px 16px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'diagnostic' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer' }}
+            style={{ padding: '8px 14px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'diagnostic' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer', fontSize: '13px' }}
           >
             Diagnóstico (RF1)
           </button>
           <button 
             onClick={() => setCurrentTab('simulator')}
-            style={{ padding: '8px 16px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'simulator' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer' }}
+            style={{ padding: '8px 14px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'simulator' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer', fontSize: '13px' }}
           >
             Simulador (RF2)
           </button>
           <button 
             onClick={() => setCurrentTab('hub')}
-            style={{ padding: '8px 16px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'hub' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer' }}
+            style={{ padding: '8px 14px', borderRadius: '6px', border: 'none', backgroundColor: currentTab === 'hub' ? '#2563eb' : '#334155', color: '#fff', fontWeight: 'bold', cursor: 'pointer', fontSize: '13px' }}
           >
             Buenas Prácticas (RF3)
           </button>

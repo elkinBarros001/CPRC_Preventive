@@ -25,22 +25,25 @@ export const BestPracticesHub: React.FC = () => {
   ];
 
   return (
-    <div style={{ maxWidth: '900px', margin: '40px auto', padding: '30px', backgroundColor: '#ffffff', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.1)', fontFamily: 'system-ui, sans-serif' }}>
-      <h2 style={{ fontSize: '24px', fontWeight: 'bold', color: '#0f172a', marginBottom: '8px' }}>Centro de Buenas Prácticas</h2>
-      <p style={{ fontSize: '14px', color: '#64748b', marginBottom: '24px' }}>Recomendaciones clave de ciberseguridad y alfabetización digital[cite: 1].</p>
+    <div style={{ width: '100%', maxWidth: '900px', margin: '20px auto', padding: '15px', boxSizing: 'border-box', fontFamily: 'system-ui, sans-serif' }}>
+      <div style={{ backgroundColor: '#ffffff', padding: '20px', borderRadius: '12px', boxShadow: '0 4px 15px rgba(0,0,0,0.1)' }}>
+        <h2 style={{ fontSize: '22px', fontWeight: 'bold', color: '#0f172a', marginBottom: '6px' }}>Centro de Buenas Prácticas</h2>
+        <p style={{ fontSize: '13px', color: '#64748b', marginBottom: '20px' }}>Recomendaciones clave de ciberseguridad y alfabetización digital.</p>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(380px, 1fr))', gap: '20px' }}>
-        {cards.map((card, idx) => (
-          <div key={idx} style={{ padding: '20px', borderRadius: '8px', border: '1px solid #cbd5e1', backgroundColor: '#f8fafc' }}>
-            <h3 style={{ fontSize: '18px', fontWeight: 'bold', color: '#1e293b', marginBottom: '8px' }}>{card.title}</h3>
-            <p style={{ fontSize: '14px', color: '#475569', marginBottom: '14px', lineHeight: '1.4' }}>{card.desc}</p>
-            <ul style={{ margin: 0, paddingLeft: '18px', fontSize: '13px', color: '#334155' }}>
-              {card.tips.map((tip, i) => (
-                <li key={i} style={{ marginBottom: '6px' }}>{tip}</li>
-              ))}
-            </ul>
-          </div>
-        ))}
+        {/* Grid adaptable que se ajusta automáticamente a pantallas pequeñas */}
+        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '16px' }}>
+          {cards.map((card, idx) => (
+            <div key={idx} style={{ padding: '16px', borderRadius: '8px', border: '1px solid #cbd5e1', backgroundColor: '#f8fafc', boxSizing: 'border-box' }}>
+              <h3 style={{ fontSize: '16px', fontWeight: 'bold', color: '#1e293b', marginBottom: '6px' }}>{card.title}</h3>
+              <p style={{ fontSize: '13px', color: '#475569', marginBottom: '12px', lineHeight: '1.4' }}>{card.desc}</p>
+              <ul style={{ margin: 0, paddingLeft: '16px', fontSize: '12px', color: '#334155' }}>
+                {card.tips.map((tip, i) => (
+                  <li key={i} style={{ marginBottom: '4px' }}>{tip}</li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
