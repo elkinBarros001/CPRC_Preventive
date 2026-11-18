@@ -1,3 +1,4 @@
+import { saveDiagnosticResultAnonymously } from '../services/firebase';
 import React, { useState } from 'react';
 
 export interface Question {
@@ -138,6 +139,9 @@ export const DiagnosticModule: React.FC = () => {
     }
 
     setResult({ totalScore, riskLevel, feedback });
+
+    //guardado anonimo de resultado a Firebase
+    saveDiagnosticResultAnonymously(totalScore, riskLevel);
   };
 
   const progressPercentage = ((currentIndex + 1) / questionsData.length) * 100;
